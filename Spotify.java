@@ -19,6 +19,8 @@ public class Spotify {
             br = new BufferedReader(new FileReader(csvFile));
             line = br.readLine(); //reads next line
             line = br.readLine(); //reads next line
+		
+	    //while there are no more lines to read
             while ((line = br.readLine()) != null) {
 
                 // use comma as separator
