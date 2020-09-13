@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=\, initial-scale=1.0"
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>NASA's Astronomy Explanation of the Day</title>
+</head>
+<body>
+
+<h1>NASA's Astronomy Explanation of the Day</h1>
+<p>
+date: <span id="date"></span><br />
+explanation: <span id="exp"></span>
+</p>
+
+<script>
+const api_url = 'https://api.nasa.gov/planetary/apod?api_key=aQ4XfV1AJyZFS2o9Hw3tHel7UZxDFZlvhtZE4s44';
+async function getISS() {
+const response = await fetch(api_url);
+const data = await response.json();
+console.log(data.date);
+console.log(data.explanation);
+const { date, explanation} = data;
+
+document.getElementById('date').textContent = date;
+document.getElementById('exp').textContent = explanation;
+}
+
+getISS();
+
+</script>
+</body>
+</html>
