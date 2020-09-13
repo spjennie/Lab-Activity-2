@@ -17,14 +17,14 @@ public class Spotify {
         try {
 
             br = new BufferedReader(new FileReader(csvFile));
-            line = br.readLine();
+            line = br.readLine(); //reads next two lines
             line = br.readLine();
             while ((line = br.readLine()) != null) {
 
                 // use comma as separator
-                String[] country = line.split(csvSplitBy);
+                String[] spotify = line.split(csvSplitBy);
 
-                System.out.println("Track name: " + country[1] + ", Artist: " + country[2]);
+                System.out.println("Track name: " + spotify[1] + ", Artist: " + spotify[2]);
 
             }
 
